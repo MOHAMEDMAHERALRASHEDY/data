@@ -143,7 +143,7 @@
 </head>
 <body>
   <div class="quiz-container">
-    <h2>Database Quiz by mohamed maher</h2>
+    <h2>Database Quiz (100 Questions)</h2>
     <div class="progress-bar">
       <div class="progress" id="progressBar"></div>
     </div>
@@ -324,9 +324,448 @@
         answer: 0,
         explanation: "A view is a virtual table based on the result set of an SQL statement."
       },
-      // Continue adding questions up to 100...
-      // For brevity, I've included only the first 25 questions
-      // You would continue adding questions 26-100 following the same pattern
+      {
+        q: "What is the difference between DELETE and TRUNCATE in SQL?",
+        options: ["DELETE removes specific rows while TRUNCATE removes all rows", "TRUNCATE is faster but can't be rolled back", "They are identical", "DELETE requires permissions while TRUNCATE doesn't"],
+        answer: 1,
+        explanation: "TRUNCATE is faster as it doesn't log individual row deletions and resets the table."
+      },
+      {
+        q: "What is the best way to optimize a slow SQL query?",
+        options: ["Add more servers", "Use EXPLAIN to analyze the query then add appropriate indexes", "Reduce the number of records in the table", "Run the query at night"],
+        answer: 1,
+        explanation: "Using EXPLAIN helps identify bottlenecks, and proper indexing can significantly improve performance."
+      },
+      {
+        q: "What is a Stored Procedure?",
+        options: ["A temporary table", "A set of SQL statements stored in the database", "A type of index", "A data backup tool"],
+        answer: 1,
+        explanation: "A stored procedure is a prepared SQL code that you can save and reuse."
+      },
+      {
+        q: "What is the purpose of the INDEX command in SQL?",
+        options: ["To create backups", "To speed up searches", "To remove duplicate data", "To encrypt data"],
+        answer: 1,
+        explanation: "Indexes are used to speed up search operations in a database."
+      },
+      {
+        q: "What is a Trigger in databases?",
+        options: ["A procedure that automatically executes when a specified event occurs", "A button in the user interface", "A type of table", "A data export tool"],
+        answer: 0,
+        explanation: "A trigger is a stored procedure that automatically executes when an event occurs in the database."
+      },
+      {
+        q: "What is a Cursor in SQL?",
+        options: ["A mouse pointer in the UI", "A database object used to process individual rows", "A type of index", "A data visualization tool"],
+        answer: 1,
+        explanation: "A cursor allows row-by-row processing of result sets."
+      },
+      {
+        q: "What is a Transaction in databases?",
+        options: ["Data transfer between servers", "A sequence of operations performed as a single unit", "A data backup", "A temporary table"],
+        answer: 1,
+        explanation: "A transaction groups multiple operations into a single all-or-nothing unit."
+      },
+      {
+        q: "What is Data Warehousing?",
+        options: ["A place to store backups", "A database optimized for analysis and reporting", "A backup server", "A data editing tool"],
+        answer: 1,
+        explanation: "A data warehouse is a central repository of integrated data from one or more sources."
+      },
+      {
+        q: "What is the difference between OLTP and OLAP?",
+        options: ["OLTP is for analysis while OLAP is for transactions", "OLTP handles day-to-day operations while OLAP handles analysis", "They are the same", "OLTP is faster than OLAP"],
+        answer: 1,
+        explanation: "OLTP (Online Transaction Processing) systems handle day-to-day operations while OLAP (Online Analytical Processing) systems handle complex analysis."
+      },
+      {
+        q: "What is NoSQL?",
+        options: ["Databases that don't use SQL at all", "Non-relational or non-tabular databases", "An older version of SQL", "A type of index"],
+        answer: 1,
+        explanation: "NoSQL refers to non-relational databases that use different data models than traditional tables."
+      },
+      {
+        q: "What is an advantage of NoSQL databases?",
+        options: ["They are more secure than SQL", "They handle unstructured or semi-structured data better", "They are always faster in all scenarios", "They require no maintenance"],
+        answer: 1,
+        explanation: "NoSQL databases excel at handling unstructured data and offer better horizontal scalability."
+      },
+      {
+        q: "What is MongoDB?",
+        options: ["A relational database", "A document-oriented NoSQL database", "A data analysis tool", "A new query language"],
+        answer: 1,
+        explanation: "MongoDB is a popular document-oriented NoSQL database that stores data in JSON-like documents."
+      },
+      {
+        q: "What is Redis?",
+        options: ["A relational database", "An in-memory key-value store", "A data visualization tool", "A query optimization tool"],
+        answer: 1,
+        explanation: "Redis is an open-source, in-memory data structure store used as a database, cache, and message broker."
+      },
+      {
+        q: "What is CAP Theorem?",
+        options: ["A theorem about computer architecture", "A theorem about database consistency, availability, and partition tolerance", "A theorem about network security", "A theorem about query optimization"],
+        answer: 1,
+        explanation: "CAP Theorem states that a distributed system can only guarantee two out of three: Consistency, Availability, and Partition tolerance."
+      },
+      {
+        q: "What is sharding in databases?",
+        options: ["A backup technique", "Splitting data across multiple machines", "A type of encryption", "A query optimization method"],
+        answer: 1,
+        explanation: "Sharding is a method for distributing data across multiple machines to improve performance and scalability."
+      },
+      {
+        q: "What is database replication?",
+        options: ["Creating multiple copies of data on different servers", "Deleting duplicate data", "A type of encryption", "A backup method"],
+        answer: 0,
+        explanation: "Replication involves maintaining multiple copies of data on different servers for fault tolerance and performance."
+      },
+      {
+        q: "What is the purpose of the EXPLAIN statement in SQL?",
+        options: ["To explain database concepts", "To show the execution plan of a query", "To explain table structures", "To document database schemas"],
+        answer: 1,
+        explanation: "EXPLAIN shows how the database executes a query, helping with optimization."
+      },
+      {
+        q: "What is a materialized view?",
+        options: ["A view that is physically stored", "A temporary view", "A view with special permissions", "A view that updates in real-time"],
+        answer: 0,
+        explanation: "A materialized view is a view whose results are physically stored and periodically refreshed."
+      },
+      {
+        q: "What is the difference between CHAR and VARCHAR data types?",
+        options: ["CHAR is fixed-length while VARCHAR is variable-length", "VARCHAR is faster than CHAR", "CHAR supports Unicode while VARCHAR doesn't", "There is no difference"],
+        answer: 0,
+        explanation: "CHAR allocates fixed space while VARCHAR allocates only as much space as needed plus overhead."
+      },
+      {
+        q: "What is a deadlock in databases?",
+        options: ["A security breach", "When two transactions block each other", "A corrupted index", "A failed backup"],
+        answer: 1,
+        explanation: "A deadlock occurs when two or more transactions permanently block each other by each holding a lock the other needs."
+      },
+      {
+        q: "What is database connection pooling?",
+        options: ["A backup method", "Reusing existing database connections", "A type of encryption", "A query optimization technique"],
+        answer: 1,
+        explanation: "Connection pooling improves performance by reusing existing connections rather than creating new ones."
+      },
+      {
+        q: "What is the purpose of the NORMALIZE function in SQL?",
+        options: ["To implement database normalization", "To standardize string formats", "To scale numeric values", "There is no NORMALIZE function in standard SQL"],
+        answer: 3,
+        explanation: "Standard SQL doesn't include a NORMALIZE function, though some databases may implement their own."
+      },
+      {
+        q: "What is a covering index?",
+        options: ["An index that covers the entire table", "An index that includes all columns needed for a query", "A backup of an index", "A special type of full-text index"],
+        answer: 1,
+        explanation: "A covering index includes all columns needed for a query, allowing the database to satisfy the query using only the index."
+      },
+
+      // Page 3 (51-75) - Advanced Concepts
+      {
+        q: "What is the difference between horizontal and vertical scaling?",
+        options: ["Horizontal adds more machines, vertical adds more power to one machine", "Vertical is for NoSQL, horizontal is for SQL", "They are the same", "Horizontal is cheaper but less reliable"],
+        answer: 0,
+        explanation: "Horizontal scaling adds more servers, while vertical scaling upgrades existing server hardware."
+      },
+      {
+        q: "What is database denormalization?",
+        options: ["A backup technique", "Intentionally introducing redundancy to improve performance", "A security vulnerability", "A type of encryption"],
+        answer: 1,
+        explanation: "Denormalization strategically introduces redundancy to optimize read performance at the cost of write performance."
+      },
+      {
+        q: "What is the purpose of the WITH clause in SQL?",
+        options: ["To create temporary tables", "To define Common Table Expressions (CTEs)", "To specify permissions", "To create views"],
+        answer: 1,
+        explanation: "The WITH clause defines Common Table Expressions (CTEs) that can be referenced within a query."
+      },
+      {
+        q: "What is a correlated subquery?",
+        options: ["A subquery that references columns from the outer query", "A subquery that runs in parallel", "A subquery that returns multiple columns", "A subquery that joins multiple tables"],
+        answer: 0,
+        explanation: "A correlated subquery references columns from the outer query and executes once for each row processed by the outer query."
+      },
+      {
+        q: "What is the purpose of the WINDOW function in SQL?",
+        options: ["To manage database windows", "To perform calculations across related rows without grouping", "To create graphical interfaces", "To manage transaction windows"],
+        answer: 1,
+        explanation: "Window functions perform calculations across sets of rows related to the current row without collapsing them into a single output row."
+      },
+      {
+        q: "What is the difference between UNION and UNION ALL?",
+        options: ["UNION removes duplicates, UNION ALL keeps them", "UNION is faster than UNION ALL", "UNION ALL requires sorted data", "There is no difference"],
+        answer: 0,
+        explanation: "UNION removes duplicate rows while UNION ALL retains all rows including duplicates."
+      },
+      {
+        q: "What is a self-join?",
+        options: ["Joining a table to itself", "Joining tables with the same structure", "An inner join with additional conditions", "A join that happens automatically"],
+        answer: 0,
+        explanation: "A self-join is when a table is joined with itself, typically to compare rows within the same table."
+      },
+      {
+        q: "What is the purpose of the CASE statement in SQL?",
+        options: ["To handle exceptions", "To implement conditional logic", "To define cases for testing", "To create case-sensitive queries"],
+        answer: 1,
+        explanation: "The CASE statement provides if-then-else conditional logic within SQL queries."
+      },
+      {
+        q: "What is a bitmap index?",
+        options: ["An index that stores bitmaps of data", "An index that uses bit arrays for low-cardinality columns", "An index for image data", "A special type of full-text index"],
+        answer: 1,
+        explanation: "Bitmap indexes use bit arrays and are efficient for columns with a small number of distinct values."
+      },
+      {
+        q: "What is the purpose of the MERGE statement in SQL?",
+        options: ["To combine two databases", "To perform INSERT, UPDATE, or DELETE operations in a single statement", "To merge query results", "To combine indexes"],
+        answer: 1,
+        explanation: "MERGE (or UPSERT) performs INSERT, UPDATE, or DELETE operations based on whether rows match."
+      },
+      {
+        q: "What is the difference between a clustered and non-clustered index?",
+        options: ["Clustered indexes sort the data physically, non-clustered don't", "Non-clustered are faster than clustered", "Clustered indexes can't be created manually", "There is no difference"],
+        answer: 0,
+        explanation: "Clustered indexes determine the physical order of data in a table, while non-clustered indexes are separate structures."
+      },
+      {
+        q: "What is database partitioning?",
+        options: ["Dividing a database into smaller, more manageable pieces", "A backup technique", "A security measure", "A type of normalization"],
+        answer: 0,
+        explanation: "Partitioning divides large tables into smaller, more manageable pieces while maintaining a single logical view."
+      },
+      {
+        q: "What is the purpose of the RANK() function in SQL?",
+        options: ["To rank database performance", "To assign a rank to each row within a partition", "To create leaderboards", "To prioritize queries"],
+        answer: 1,
+        explanation: "RANK() assigns a rank with gaps to each row within a partition of a result set."
+      },
+      {
+        q: "What is a database constraint?",
+        options: ["A limitation on database size", "A rule enforced on data in a table", "A performance bottleneck", "A type of index"],
+        answer: 1,
+        explanation: "Constraints are rules that limit what data can be stored in a table (e.g., PRIMARY KEY, FOREIGN KEY, CHECK)."
+      },
+      {
+        q: "What is the purpose of the COALESCE function in SQL?",
+        options: ["To merge tables", "To return the first non-null expression", "To combine strings", "To calculate averages"],
+        answer: 1,
+        explanation: "COALESCE returns the first non-null expression among its arguments."
+      },
+      {
+        q: "What is the difference between a database and a data warehouse?",
+        options: ["Databases are for transactions, warehouses for analysis", "Warehouses are smaller than databases", "Databases use SQL, warehouses don't", "There is no difference"],
+        answer: 0,
+        explanation: "Databases are optimized for transaction processing (OLTP), while data warehouses are optimized for analytical processing (OLAP)."
+      },
+      {
+        q: "What is the purpose of the ROLLBACK statement in SQL?",
+        options: ["To undo changes in a transaction", "To go back to a previous query", "To reverse database updates", "To cancel a database operation"],
+        answer: 0,
+        explanation: "ROLLBACK undoes all changes made in the current transaction."
+      },
+      {
+        q: "What is a database trigger used for?",
+        options: ["To automatically execute code when database events occur", "To start database operations", "To create backups", "To optimize queries"],
+        answer: 0,
+        explanation: "Triggers automatically execute in response to specific events (INSERT, UPDATE, DELETE) on a table."
+      },
+      {
+        q: "What is the purpose of the GROUPING SETS clause in SQL?",
+        options: ["To group multiple GROUP BY clauses", "To create sets of groups", "To define grouping levels in a single query", "To organize database files"],
+        answer: 2,
+        explanation: "GROUPING SETS allows specifying multiple grouping levels in a single query."
+      },
+      {
+        q: "What is the difference between a database and a schema?",
+        options: ["A database contains schemas", "A schema is another name for database", "Databases are physical, schemas are logical", "There is no difference"],
+        answer: 0,
+        explanation: "A database is a collection of schemas, which in turn contain database objects like tables and views."
+      },
+      {
+        q: "What is the purpose of the PIVOT operator in SQL?",
+        options: ["To rotate rows into columns", "To create pivot tables", "To optimize queries", "To change database orientation"],
+        answer: 0,
+        explanation: "PIVOT transforms unique values from one column into multiple columns in the output."
+      },
+      {
+        q: "What is a database cursor used for?",
+        options: ["To point to data", "To process result sets row by row", "To navigate databases", "To mark positions in queries"],
+        answer: 1,
+        explanation: "Cursors enable row-by-row processing of result sets, useful for complex row-specific operations."
+      },
+      {
+        q: "What is the purpose of the LATERAL join in SQL?",
+        options: ["To join tables side by side", "To reference columns from preceding tables in a subquery", "To create lateral views", "To optimize join performance"],
+        answer: 1,
+        explanation: "LATERAL allows a subquery to reference columns from tables that appear earlier in the FROM clause."
+      },
+      {
+        q: "What is the difference between a materialized view and a regular view?",
+        options: ["Materialized views are stored physically", "Regular views are faster", "Materialized views can't be updated", "There is no difference"],
+        answer: 0,
+        explanation: "Materialized views store query results physically and can be refreshed, while regular views are virtual."
+      },
+      {
+        q: "What is the purpose of the RECURSIVE keyword in Common Table Expressions?",
+        options: ["To repeat queries", "To implement recursive queries", "To optimize recursive functions", "To prevent infinite loops"],
+        answer: 1,
+        explanation: "RECURSIVE allows CTEs to reference themselves, enabling hierarchical or recursive queries."
+      },
+
+      // Page 4 (76-100) - Expert Concepts
+      {
+        q: "What is database sharding?",
+        options: ["A backup technique", "Partitioning data across multiple databases", "A type of encryption", "A query optimization method"],
+        answer: 1,
+        explanation: "Sharding horizontally partitions data across multiple databases to distribute load."
+      },
+      {
+        q: "What is the purpose of the TABLESAMPLE clause in SQL?",
+        options: ["To sample table structures", "To retrieve a random sample of rows", "To create sample tables", "To analyze table sizes"],
+        answer: 1,
+        explanation: "TABLESAMPLE retrieves a random sample of rows from a table for approximate queries."
+      },
+      {
+        q: "What is a federated database?",
+        options: ["A database with federal security standards", "A virtual database integrating multiple autonomous databases", "A government database", "A distributed transaction system"],
+        answer: 1,
+        explanation: "A federated database provides a unified view of multiple autonomous databases."
+      },
+      {
+        q: "What is the purpose of the UNPIVOT operator in SQL?",
+        options: ["To normalize data", "To transform columns into rows", "To reverse PIVOT operations", "To flatten hierarchical data"],
+        answer: 1,
+        explanation: "UNPIVOT transforms columns into rows, the inverse of PIVOT operations."
+      },
+      {
+        q: "What is temporal data in databases?",
+        options: ["Data about time zones", "Data that changes over time with historical tracking", "Temporary data", "Time-series data"],
+        answer: 1,
+        explanation: "Temporal data maintains historical versions of data along with time validity periods."
+      },
+      {
+        q: "What is the purpose of the CUBE operator in SQL?",
+        options: ["To create multidimensional cubes", "To generate all possible grouping sets", "To optimize cube-shaped data", "To calculate volumes"],
+        answer: 1,
+        explanation: "CUBE generates a result set with all possible grouping sets for the specified columns."
+      },
+      {
+        q: "What is a blockchain database?",
+        options: ["A database that uses blockchain technology", "A database for cryptocurrency", "An immutable, decentralized database", "All of the above"],
+        answer: 3,
+        explanation: "Blockchain databases are decentralized, immutable ledgers often used for cryptocurrency but with broader applications."
+      },
+      {
+        q: "What is the purpose of the ROLLUP operator in SQL?",
+        options: ["To create summary rows", "To reverse transactions", "To generate hierarchical subtotals", "To optimize rollback operations"],
+        answer: 2,
+        explanation: "ROLLUP generates hierarchical subtotals from the most detailed to the grand total."
+      },
+      {
+        q: "What is a columnar database?",
+        options: ["A database that stores data in columns rather than rows", "A database with vertical orientation", "A spreadsheet-like database", "A database for scientific computing"],
+        answer: 0,
+        explanation: "Columnar databases store data by column rather than by row, optimizing analytical queries."
+      },
+      {
+        q: "What is the purpose of the LEAD() and LAG() functions in SQL?",
+        options: ["To navigate query execution", "To access data from subsequent or preceding rows", "To lead or lag database operations", "To control transaction timing"],
+        answer: 1,
+        explanation: "LEAD() accesses data from subsequent rows, while LAG() accesses data from preceding rows."
+      },
+      {
+        q: "What is a graph database?",
+        options: ["A database for storing images", "A database that uses graph structures for semantic queries", "A database with graphical interface", "A database for chart data"],
+        answer: 1,
+        explanation: "Graph databases use graph structures with nodes, edges, and properties to represent and store data."
+      },
+      {
+        q: "What is the purpose of the FIRST_VALUE() and LAST_VALUE() functions in SQL?",
+        options: ["To get the first and last values in a database", "To return the first or last value in an ordered partition", "To find extreme values", "To optimize value storage"],
+        answer: 1,
+        explanation: "These window functions return the first or last value in an ordered partition of a result set."
+      },
+      {
+        q: "What is database mirroring?",
+        options: ["Creating a mirror image of data", "Maintaining a real-time copy of a database", "A backup technique", "A data visualization method"],
+        answer: 1,
+        explanation: "Mirroring maintains a real-time copy (mirror) of a database on a separate server for high availability."
+      },
+      {
+        q: "What is the purpose of the NTILE() function in SQL?",
+        options: ["To divide rows into tiles", "To distribute rows into a specified number of roughly equal groups", "To create tile-based visualizations", "To optimize tile storage"],
+        answer: 1,
+        explanation: "NTILE() divides rows into a specified number of approximately equal groups."
+      },
+      {
+        q: "What is a time-series database?",
+        options: ["A database for chronological data", "A database optimized for time-stamped data", "A historical database", "All of the above"],
+        answer: 3,
+        explanation: "Time-series databases are optimized for handling time-stamped data points."
+      },
+      {
+        q: "What is the purpose of the PERCENT_RANK() function in SQL?",
+        options: ["To rank percentages", "To calculate the relative rank of a row (0 to 1)", "To find percentile ranks", "To optimize percentage calculations"],
+        answer: 1,
+        explanation: "PERCENT_RANK() calculates the relative rank of a row (0 to 1) within a result set."
+      },
+      {
+        q: "What is database virtualization?",
+        options: ["Creating virtual databases", "Abstracting database resources from physical infrastructure", "Simulating databases", "A type of database backup"],
+        answer: 1,
+        explanation: "Database virtualization abstracts database resources from the underlying physical infrastructure."
+      },
+      {
+        q: "What is the purpose of the CUME_DIST() function in SQL?",
+        options: ["To calculate cumulative distribution", "To find cumulative distances", "To distribute data cumulatively", "To optimize cumulative operations"],
+        answer: 0,
+        explanation: "CUME_DIST() calculates the cumulative distribution of a value in a group of values."
+      },
+      {
+        q: "What is an in-memory database?",
+        options: ["A database stored entirely in RAM", "A database with memory caching", "A temporary database", "A database for memory analysis"],
+        answer: 0,
+        explanation: "In-memory databases store data primarily in RAM for faster access speeds."
+      },
+      {
+        q: "What is the purpose of the JSON_TABLE function in SQL?",
+        options: ["To create JSON from tables", "To convert JSON data to relational format", "To store tables as JSON", "To optimize JSON storage"],
+        answer: 1,
+        explanation: "JSON_TABLE transforms JSON data into a relational format that can be queried like a regular table."
+      },
+      {
+        q: "What is a vector database?",
+        options: ["A database for mathematical vectors", "A database optimized for vector embeddings and similarity search", "A database with vector graphics", "A database for physics simulations"],
+        answer: 1,
+        explanation: "Vector databases are optimized for storing and querying vector embeddings, used in AI/ML applications."
+      },
+      {
+        q: "What is the purpose of the LISTAGG function in SQL?",
+        options: ["To aggregate lists", "To concatenate values from multiple rows into a single string", "To list aggregate functions", "To optimize list operations"],
+        answer: 1,
+        explanation: "LISTAGG concatenates values from multiple rows into a single string with a specified delimiter."
+      },
+      {
+        q: "What is database deduplication?",
+        options: ["A backup technique", "The process of identifying and removing duplicate records", "A type of compression", "A security measure"],
+        answer: 1,
+        explanation: "Deduplication identifies and removes duplicate records to improve data quality."
+      },
+      {
+        q: "What is the purpose of the APPROX_COUNT_DISTINCT function in SQL?",
+        options: ["To estimate distinct values", "To approximately count distinct values for better performance", "To count similar values", "To optimize distinct operations"],
+        answer: 1,
+        explanation: "APPROX_COUNT_DISTINCT provides faster but approximate counts of distinct values for large datasets."
+      },
+      {
+        q: "What is a multi-model database?",
+        options: ["A database with multiple schemas", "A database supporting multiple data models", "A database for 3D modeling", "A database with multiple relational models"],
+        answer: 1,
+        explanation: "Multi-model databases support multiple data models (document, graph, key-value, etc.) in a single engine."
+      }
     ];
 
     // Configuration
